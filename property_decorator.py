@@ -6,7 +6,6 @@
 
 class Product:
 	def __init__(self, init_price):
-		# This instance attribute is private because its name have a leading underscore
 		self.price = init_price # note that we are calling our setter
 
 	@property # this is the getter
@@ -19,7 +18,7 @@ class Product:
 			raise ValueError("A product cannot have a negative value")
 		else:
 			self.__price = new_price
-			print(f"The prices has been updated succesfuly with {new_price}")
+			print(f"The price has been updated succesfuly with {new_price}")
 	
 	@price.deleter
 	def price(self):
